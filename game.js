@@ -40,17 +40,41 @@ function updateCounts () {
     green: 0,
     invisible: 0
   }
-  var punt = (document.getElementsByClassName('board')[0].children)
-    for (var p = 0; p < punt.length; p++ && (console.log("p value", p))) {
-      punt[p].classList.contains('blue', totals.blue ++ , console.log("blue", totals.blue))
-      punt[p].classList.contains('green', totals.green ++, console.log("green", totals.green))
-      punt[p].classList.contains('invisible', totals.invisible ++, console.log("invisible", totals.invisible))
 
+  // For some reason this keeps failing 
+  //   var dots = document.getElementsByClassName('board')[0].children
+  //   for (i = 0; i < dots.length; i++ ) {
+  //     var punt = dots[i]
+      
+  //  "failing here -classlist undefined, sigh, found it.... " if (punt[i].classList.contains('blue')) {
+  //       totals.blue++ 
+  //     } 
+  //     if  (punt.classList.contains('green')) {
+  //         totals.green++ 
+  //     } 
+  //     if (punt[i].classList.contains('invisible')) {
+  //         totals.invisible++ 
+  //     }
+
+  // }
+
+  var dots = document.getElementsByClassName('board')[0].children
+  for (i = 0; i < dots.length; i++) {
+    var dot = dots[i]
+    if (dot.classList.contains('green')) {
+      totals.green++
+    }
+    if (dot.classList.contains('blue')) {
+      totals.blue++
+    }
+    if (dot.classList.contains('invisible')) {
+      totals.invisible++
+    }
   }
 
 
 
-  // WRITE CODE HERE TO COUNT BLUE, GREEN, AND INVISIBLE DOTS
+
 
   // Once you've done the counting, this function will update the display
   displayTotals(totals)
