@@ -40,12 +40,11 @@ function updateCounts () {
     green: 0,
     invisible: 0
   }
-  
-  bindEventListeners(document.getElementsByClassName('board')[0].children) 
-    for (var i = 0; i < dots.length; i++) {
-      dots[i].classList.contains('blue', totals.blue ++ , console.log(totals.blue))
-      dots[i].classList.contains('green', totals.green ++)
-      dots[i].classList.contains('invisible', totals.invisible ++)
+  var punt = (document.getElementsByClassName('board')[0].children)
+    for (var p = 0; p < punt.length; p++ && (console.log("p value", p))) {
+      punt[p].classList.contains('blue', totals.blue ++ , console.log("blue", totals.blue))
+      punt[p].classList.contains('green', totals.green ++, console.log("green", totals.green))
+      punt[p].classList.contains('invisible', totals.invisible ++, console.log("invisible", totals.invisible))
 
   }
 
